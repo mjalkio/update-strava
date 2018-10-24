@@ -1,0 +1,8 @@
+Taken from: https://yizeng.me/2017/01/11/get-a-strava-api-access-token-with-write-permission/
+
+http://www.strava.com/oauth/authorize?client_id=YOUR_CLIENT_ID&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=activity:read_all,activity:write
+
+curl -X POST https://www.strava.com/oauth/token \
+-F client_id=YOUR_CLIENT_ID \
+-F client_secret=YOUR_CLIENT_SECRET \
+-F code=CODE_FROM_URL_ABOVE
